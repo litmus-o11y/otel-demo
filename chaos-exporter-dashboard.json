@@ -1,0 +1,551 @@
+{
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": {
+            "type": "grafana",
+            "uid": "-- Grafana --"
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 39,
+    "links": [],
+    "panels": [
+      {
+        "collapsed": false,
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 0
+        },
+        "id": 8,
+        "panels": [],
+        "title": "Chaos Exporter Dashboard",
+        "type": "row"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "webstore-metrics"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "fillOpacity": 50,
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "insertNulls": false,
+              "lineWidth": 0,
+              "spanNulls": false
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "transparent",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 7,
+          "w": 20,
+          "x": 0,
+          "y": 1
+        },
+        "id": 1,
+        "options": {
+          "alignValue": "center",
+          "legend": {
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": false
+          },
+          "mergeValues": true,
+          "rowHeight": 0.7,
+          "showValue": "auto",
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "10.4.1",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "webstore-metrics"
+            },
+            "disableTextWrap": false,
+            "editorMode": "builder",
+            "expr": "litmuschaos_experiment_total_duration",
+            "format": "time_series",
+            "fullMetaSearch": false,
+            "includeNullMetadata": true,
+            "legendFormat": "{{chaosengine_name}}",
+            "range": true,
+            "refId": "A",
+            "useBackend": false
+          }
+        ],
+        "title": "Chaos Experiments Duration",
+        "type": "state-timeline"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "webstore-metrics"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "format": "short",
+        "gridPos": {
+          "h": 6,
+          "w": 5,
+          "x": 0,
+          "y": 8
+        },
+        "id": 2,
+        "max": 100,
+        "min": 0,
+        "options": {
+          "minVizHeight": 75,
+          "minVizWidth": 75,
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showThresholdLabels": false,
+          "showThresholdMarkers": true,
+          "sizing": "auto"
+        },
+        "pluginVersion": "10.4.1",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "webstore-metrics"
+            },
+            "disableTextWrap": false,
+            "editorMode": "builder",
+            "expr": "litmuschaos_cluster_scoped_experiments_installed_count",
+            "format": "time_series",
+            "fullMetaSearch": false,
+            "includeNullMetadata": true,
+            "legendFormat": "Total Experiments",
+            "range": true,
+            "refId": "A",
+            "useBackend": false
+          }
+        ],
+        "thresholds": "0,50,100",
+        "title": "Total Experiments",
+        "type": "gauge",
+        "valueMaps": [
+          {
+            "text": "No Data",
+            "value": "null"
+          }
+        ],
+        "valueName": "current"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "webstore-metrics"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "fixedColor": "dark-yellow",
+              "mode": "fixed"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "format": "short",
+        "gridPos": {
+          "h": 6,
+          "w": 5,
+          "x": 5,
+          "y": 8
+        },
+        "id": 5,
+        "max": 100,
+        "min": 0,
+        "options": {
+          "minVizHeight": 75,
+          "minVizWidth": 75,
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showThresholdLabels": false,
+          "showThresholdMarkers": true,
+          "sizing": "auto"
+        },
+        "pluginVersion": "10.4.1",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "webstore-metrics"
+            },
+            "disableTextWrap": false,
+            "editorMode": "builder",
+            "expr": "litmuschaos_cluster_scoped_awaited_experiments",
+            "format": "time_series",
+            "fullMetaSearch": false,
+            "includeNullMetadata": true,
+            "legendFormat": "Queued Experiments",
+            "range": true,
+            "refId": "A",
+            "useBackend": false
+          }
+        ],
+        "thresholds": "0,50,100",
+        "title": "Awaited Experiments",
+        "type": "gauge",
+        "valueMaps": [
+          {
+            "text": "No Data",
+            "value": "null"
+          }
+        ],
+        "valueName": "current"
+      },
+      {
+        "columns": [
+          {
+            "text": "Chaos Engine Name",
+            "value": "chaosengine_name"
+          },
+          {
+            "text": "Passed Experiments",
+            "value": "litmuschaos_passed_experiments"
+          },
+          {
+            "text": "Failed Experiments",
+            "value": "litmuschaos_failed_experiments"
+          },
+          {
+            "text": "Queued Experiments",
+            "value": "litmuschaos_awaited_experiments"
+          }
+        ],
+        "datasource": "Prometheus",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {
+              "align": "auto",
+              "cellOptions": {
+                "type": "auto"
+              },
+              "inspect": false
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 12,
+          "w": 10,
+          "x": 10,
+          "y": 8
+        },
+        "id": 6,
+        "options": {
+          "cellHeight": "sm",
+          "footer": {
+            "countRows": false,
+            "fields": "",
+            "reducer": [
+              "sum"
+            ],
+            "show": false
+          },
+          "showHeader": true
+        },
+        "pluginVersion": "10.4.1",
+        "styles": [
+          {
+            "alias": "Total Experiments",
+            "pattern": "Total",
+            "type": "number"
+          },
+          {
+            "alias": "Passed Experiments",
+            "pattern": "Passed",
+            "type": "number"
+          },
+          {
+            "alias": "Failed Experiments",
+            "pattern": "Failed",
+            "type": "number"
+          },
+          {
+            "alias": "Queued Experiments",
+            "pattern": "Queued",
+            "type": "number"
+          }
+        ],
+        "targets": [
+          {
+            "expr": "sum by (chaosengine_name) (litmuschaos_passed_experiments) or sum by (chaosengine_name) (litmuschaos_failed_experiments) or sum by (chaosengine_name) (litmuschaos_awaited_experiments)",
+            "format": "table",
+            "legendFormat": "Experiment Details",
+            "refId": "A"
+          }
+        ],
+        "title": "Experiment Details",
+        "type": "table"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "webstore-metrics"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "format": "short",
+        "gridPos": {
+          "h": 6,
+          "w": 5,
+          "x": 0,
+          "y": 14
+        },
+        "id": 3,
+        "max": 100,
+        "min": 0,
+        "options": {
+          "minVizHeight": 75,
+          "minVizWidth": 75,
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showThresholdLabels": false,
+          "showThresholdMarkers": true,
+          "sizing": "auto"
+        },
+        "pluginVersion": "10.4.1",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "webstore-metrics"
+            },
+            "disableTextWrap": false,
+            "editorMode": "builder",
+            "expr": "litmuschaos_cluster_scoped_passed_experiments",
+            "format": "time_series",
+            "fullMetaSearch": false,
+            "includeNullMetadata": true,
+            "legendFormat": "Passed Experiments",
+            "range": true,
+            "refId": "A",
+            "useBackend": false
+          }
+        ],
+        "thresholds": "0,50,100",
+        "title": "Passed Experiments",
+        "type": "gauge",
+        "valueMaps": [
+          {
+            "text": "No Data",
+            "value": "null"
+          }
+        ],
+        "valueName": "current"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "webstore-metrics"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "fixedColor": "dark-red",
+              "mode": "fixed"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "format": "short",
+        "gridPos": {
+          "h": 6,
+          "w": 5,
+          "x": 5,
+          "y": 14
+        },
+        "id": 4,
+        "max": 100,
+        "min": 0,
+        "options": {
+          "minVizHeight": 75,
+          "minVizWidth": 75,
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showThresholdLabels": false,
+          "showThresholdMarkers": true,
+          "sizing": "auto"
+        },
+        "pluginVersion": "10.4.1",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "webstore-metrics"
+            },
+            "disableTextWrap": false,
+            "editorMode": "builder",
+            "expr": "litmuschaos_cluster_scoped_failed_experiments",
+            "format": "time_series",
+            "fullMetaSearch": false,
+            "includeNullMetadata": true,
+            "legendFormat": "Failed Experiments",
+            "range": true,
+            "refId": "A",
+            "useBackend": false
+          }
+        ],
+        "thresholds": "0,50,100",
+        "title": "Failed Experiments",
+        "type": "gauge",
+        "valueMaps": [
+          {
+            "text": "No Data",
+            "value": "null"
+          }
+        ],
+        "valueName": "current"
+      }
+    ],
+    "refresh": "5m",
+    "schemaVersion": 39,
+    "tags": [],
+    "templating": {
+      "list": []
+    },
+    "time": {
+      "from": "now-6h",
+      "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "browser",
+    "title": "Chaos Experiments Dashboard",
+    "uid": "chaos-experiments-dashboard",
+    "version": 5,
+    "weekStart": ""
+  }
