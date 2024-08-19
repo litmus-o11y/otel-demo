@@ -10,7 +10,7 @@
 - interval: 3s
 - attempt: 3
 - prometheus endpoint: `http://otel-demo-prometheus-server.otel-demo:9090`
-- prometheus query: `histogram_quantile(0.99, sum(rate(duration_milliseconds_bucket{service_name="shippingservice"}[5m])) by (le)) / 1000`
+- prometheus query: `histogram_quantile(0.99, sum(rate(duration_milliseconds_bucket{service_name=\"shippingservice\"}[5m])) by (le)) / 1000`
 - Data Comparison:
   - Type: Float
   - Criteria: `<`
