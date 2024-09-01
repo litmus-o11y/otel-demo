@@ -9,7 +9,7 @@
 - timeout: 3s
 - interval: 3s
 - prometheus endpoint: `http://my-otel-demo-prometheus-server.otel-demo:9090`
-- prometheus query: `sum (rate(calls_total{status_code=\"STATUS_CODE_ERROR\", span_name=\"grpc.oteldemo.RecommendationService/ListRecommendations\"}[5m]))`
+- prometheus query: `sum(rate(calls_total{status_code=\"STATUS_CODE_ERROR\", span_name=\"grpc.oteldemo.RecommendationService/ListRecommendations\"}[5m]))`
 - Data Comparison:
   - Type: Float
   - Criteria: `<`
@@ -22,4 +22,4 @@
 1. Click on the `Run` button
 2. Check Experiment Status and Logs
 3. Check the Resilience Score
-4. Check Error Rate for frontend using Grafana ![frontend_spanmetrics.png](frontend_spanmetrics.png)
+4. Check Error Rate for frontend using Grafana ![frontend_spanmetrics.png](../screenshots/frontend_spanmetrics.png)
