@@ -22,4 +22,4 @@
 1. Click on the `Run` button
 2. Check Experiment Status and Logs
 3. Check the Resilience Score
-4. Check Error Rate for frontend using Grafana
+4. Check Error Rate for frontend using Grafana ![frontend_spanmetrics.png](frontend_spanmetrics.png)
