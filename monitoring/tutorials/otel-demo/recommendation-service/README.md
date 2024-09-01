@@ -1,4 +1,4 @@
-# cart service pod network latency
+# recommendation service pod delete
 ## Description
 - This experiment injects pod delete chaos to the recommendation service pod.
 - The Probe checks the Prometheus metrics for the error rate of the ListRecommendations span.
