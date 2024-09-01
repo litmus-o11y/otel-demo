@@ -84,6 +84,8 @@ This tutorial provides instructions on setting up and using OpenTelemetry for mo
 
 ### 4. Add Grafana Panel
 Import the `chaos-experiments-dashboard.json` file into Grafana to visualize the results of chaos experiments.
+![chaos-experiments-dashboard-1.png](./screenshots/chaos-experiments-dashboard-1.png)
+![chaos-experiments-dashboard-2.png](./screenshots/chaos-experiments-dashboard-2.png)
 
 ### 5. Experiments on Target Applications
 Explore the following experiments to test and observe chaos in target applications:
