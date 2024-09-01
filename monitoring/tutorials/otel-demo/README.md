@@ -1,7 +1,3 @@
-Here's the completed README with appropriate details:
-
----
-
 # Otel-demo
 
 This tutorial provides instructions on setting up and using OpenTelemetry for monitoring target applications under chaos.
