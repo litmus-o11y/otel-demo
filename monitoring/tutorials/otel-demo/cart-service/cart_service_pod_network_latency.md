@@ -22,4 +22,4 @@
 1. Click on the `Run` button
 2. Check Experiment Status and Logs
 3. Check the Resilience Score
-4. Check cart service Spanmetrics Metrics using Grafana
+4. Check cart service Spanmetrics Metrics using Grafana ![cartservice_spanmetrics.png](../screenshots/cartservice_spanmetrics.png)
