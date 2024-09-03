@@ -12,7 +12,7 @@ This directory contains chaos interleaved grafana dashboards along with the util
 
   > Contains utilities required to setup monitoring infrastructure on a kubernetes cluster.
 
-- [Tutorials](https://github.com/litmuschaos/litmus/blob/master/monitoring/tutorials)
+- [Tutorials](./tutorials)
   
   > Contains tutorials on monitoring target applications under chaos using various tools.
 
