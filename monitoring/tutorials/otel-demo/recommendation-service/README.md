@@ -23,5 +23,5 @@
 1. Click on the `Run` button
 2. Check Experiment Status and Logs
 3. Check the Resilience Score
-4. Check Chaos Exporter Metrics using Grafana ![recommendation_service_pod_delete_experiment_result_dashboard.png](../screenshots/recommendation_service_pod_delete_experiment_result_dashboard.png)
+4. Check the Chaos Exporter metrics using Grafana and confirm if the experiment passed. ![recommendation_service_pod_delete_experiment_result_dashboard.png](../screenshots/recommendation_service_pod_delete_experiment_result_dashboard.png)
 5. Check Error Rate in frontend service Spanmetrics  using Grafana ![frontend_spanmetrics.png](../screenshots/frontend_spanmetrics.png)
